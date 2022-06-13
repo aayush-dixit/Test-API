@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --w",
-    "start": "tsc && ts-node ./dist/server.js"
+    "start": "tsc && ts-node ./dist/server.js",
+    "test": "cross-env DATABASE_URI=mongodb+srv://aayush:patcheyz@cluster0.qi1b49n.mongodb.net/testDB?retryWrites=true&w=majority jest --collectCoverage --forceExit --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
