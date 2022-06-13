@@ -31,12 +31,12 @@ a.post('/postMessage', async (req : Post, res : any) => {
     let post: Post = req.body;
     let message = new myModel(post); 
     try {        
-        let oldPost : Post = await myModel.find(
-            {'id' : message.id}
-        )
-        if (oldPost) {
-            return;
-        }
+        // let oldPost : Post = await myModel.find(
+        //     {'id' : message.id}
+        // )
+        // if (oldPost) {
+        //     return;
+        // }
         await message.save();
         res.status(200).send("Message successfuly posted");
     } catch (err) {

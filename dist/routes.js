@@ -28,10 +28,12 @@ a.post('/postMessage', (req, res) => __awaiter(void 0, void 0, void 0, function*
     let post = req.body;
     let message = new myModel(post);
     try {
-        let oldPost = yield myModel.find({ 'id': message.id });
-        if (oldPost) {
-            return;
-        }
+        // let oldPost : Post = await myModel.find(
+        //     {'id' : message.id}
+        // )
+        // if (oldPost) {
+        //     return;
+        // }
         yield message.save();
         res.status(200).send("Message successfuly posted");
     }
