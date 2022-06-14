@@ -1,6 +1,7 @@
-"test": {
+{
+"test" : {
   "presets": [
-    "@babel/preset-typescript",  // <---
+    "@babel/preset-typescript", 
     [
       "next/babel",
       {
@@ -19,4 +20,5 @@
       }
     ]
   ]
+}
 }

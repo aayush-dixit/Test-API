@@ -23,7 +23,7 @@ a.get('/getMessage', async (req : pID, res : any) => {
         );
         res.status(200).send(message);
     } catch (err) {
-        res.status(404).send(err);
+        res.status(404).send(err.message);
     }
 });
 
@@ -40,7 +40,7 @@ a.post('/postMessage', async (req : Post, res : any) => {
         await message.save();
         res.status(200).send("Message successfuly posted");
     } catch (err) {
-        res.status(400).send(err);
+        res.status(400).send(err.message);
     }
 });
 
